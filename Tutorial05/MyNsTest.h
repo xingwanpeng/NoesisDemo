@@ -1,12 +1,15 @@
 #include <NoesisGUI.h>
 
-class MyNsTest : public Noesis::Grid
+class MyNsTest : public Noesis::Page
 {
 public:
 	MyNsTest();
 	~MyNsTest();
-	
-	NS_IMPLEMENT_INLINE_REFLECTION(MyNsTest, Noesis::Grid)
+	Noesis::Grid *_title;
+	void MyNsTest::OnInit(Noesis::BaseComponent *sender, const Noesis::EventArgs& event);
+	void MyNsTest::createTitle();
+
+	NS_IMPLEMENT_INLINE_REFLECTION(MyNsTest, Noesis::Page)
 	{
 		NsMeta<Noesis::TypeId>("MyNsTest");
 	}
