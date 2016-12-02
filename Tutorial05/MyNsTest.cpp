@@ -9,7 +9,7 @@ MyNsTest::MyNsTest(){
 	this->Initialized() += MakeDelegate(this, &MyNsTest::OnInit);
 	Noesis::GUI::LoadComponent(this, "xwp.xaml");
 
-	_title = FindName<Grid>("titleGrid");
+	_title = FindName<Grid>("titleGrid");;
 	createTitle();
 }
 
