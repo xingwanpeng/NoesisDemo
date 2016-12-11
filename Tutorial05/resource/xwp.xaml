@@ -1,13 +1,11 @@
 <Grid
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  x:Name="MyNsTest"
   x:Class="MyNsTest">
   <Grid.Resources>
               <Style x:Name="TitleButtonStyle" TargetType="{x:Type Button}">
-                  <Setter.Value>
-                    <Background ImageBrush="{Binding backImage}">
--                   </Background>
-                   </Setter.Value>
+                 <Setter Property="Background" Value="{Binding BackImage,ElementName=MyNsTest}"/>
                  </Style>
               <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
                     <Setter Property="FontSize" Value="16"/>
@@ -32,7 +30,7 @@
              </Style>
       </Grid.Resources>
   
-  <Grid Background="lightGray" ShowGridLines="False" Height="220" Width="840">
+  <Grid Background="Blue" ShowGridLines="False" Height="220" Width="840">
         
       <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
@@ -50,8 +48,6 @@
       <Button  Grid.Column="2" Grid.Row="2" Content="RightDown" Style="{StaticResource ButtonStyle}"> </Button>
       <StackPanel Grid.Column="1" Grid.Row="0" Width="640" Height="60">
                <ScrollViewer Name="titleView" Margin="0, 0" Width="640"  Height="60" PanningMode="Both"  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden">      
-                
-                
                 <Grid Background="White" ShowGridLines="False" Height="60" Width="640" Name="titleGrid">
                       <Grid.RowDefinitions>
                             <RowDefinition Height="45"/>

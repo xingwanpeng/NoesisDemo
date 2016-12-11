@@ -167,7 +167,7 @@ copy ..\..\..\..\Runtimes\NoesisGUI-win-x86\Bin\tbb.dll $(SolutionDir)$(Configur
       <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>WIN32;_DEBUG;DEBUG;PROFILE;_WINDOWS;_WIN32_WINNT=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>Include;Renderers/D3D11</AdditionalIncludeDirectories>
     </ClCompile>
@@ -192,7 +192,7 @@ copy ..\..\..\..\Runtimes\NoesisGUI-win-x86\Bin\tbb.dll $(SolutionDir)$(Configur
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>copy ..\..\..\..\Bin\windows_x86_64\Noesis.dll $(OutDir)</Command>
+      <Command>copy Bin\Noesis.dll $(OutDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
